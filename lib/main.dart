@@ -17,7 +17,7 @@ class Appli extends StatelessWidget {
         appBar: AppBar(title: const Text("Hudai")),
         body: Container(
           height: MediaQuery.of(context).size.height / 2,
-          width: MediaQuery.of(context).size.height / 2,
+          width: MediaQuery.of(context).size.width,
           margin: const EdgeInsets.all(8),
           child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
