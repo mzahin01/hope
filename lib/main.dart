@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hope/ptwo.dart';
 import 'package:hope/pthree.dart';
+import 'package:hope/ptwo.dart';
 
 main() {
   runApp(const MaterialApp(
@@ -24,15 +24,27 @@ class Appli extends StatelessWidget {
                   crossAxisCount: 2),
               itemCount: 2,
               itemBuilder: (context, int index) {
-                return _box(index);
+                return _box(index, context);
               }),
         ));
   }
 
-  Widget _box(int index) {
-    return Container(color: index / 2 == 0 ? Colors.red : Colors.green);
-    onPressed() {
-      if (index == 1) {}
-    }
+  Widget _box(int index, BuildContext context) {
+    return MaterialButton(
+      color: index / 2 == 0 ? Colors.black : Colors.amber,
+      onPressed: () {
+        if (index == 0) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const Two()),
+          );
+        } else if (index == 1) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const Three()),
+          );
+        }
+      },
+    );
   }
 }
