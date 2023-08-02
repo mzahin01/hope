@@ -18,7 +18,7 @@ class Appli extends StatelessWidget {
         body: Container(
           height: MediaQuery.of(context).size.height / 2,
           width: MediaQuery.of(context).size.width,
-          margin: const EdgeInsets.all(10),
+          margin: const EdgeInsets.all(20),
           child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2),
